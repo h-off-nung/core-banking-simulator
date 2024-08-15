@@ -52,7 +52,7 @@ public class Admin extends User {
     }
 
     // Method to view all transactions in the system
-    public void viewAllTransactions(TransactionService transactionService) {
+    public void viewAllTransactions(TransactionService transactionService) throws SQLException {
         List<Transaction> transactions = transactionService.getAllTransactions();
         if (transactions.isEmpty()) {
             System.out.println("No transactions found.");
