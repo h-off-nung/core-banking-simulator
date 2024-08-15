@@ -1,63 +1,36 @@
-# 📜 The Core Banking Simulator
+## 🏦 The Core Banking Simulator
 
-Welcome to the **Core Banking Simulator** project! This application is built using **Java** with an **SQLite** encrypted database, structured with **Maven**, and developed in **IntelliJ IDEA**. The application is designed for console-based control without a graphical user interface (GUI), ensuring a straightforward and secure experience for managing user and admin functionalities.
+Welcome to **The Core Banking Simulator**, a console-based banking application built with Java and SQLite. This project showcases a complete banking system with user authentication, card management, and transaction processing. It's designed to be a solid addition to your portfolio and a great way to improve your coding skills.
 
-## 🚀 Features
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white) ![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
 
-### 🛠️ Project Setup
-- **Java**: Core language used for application logic.
-- **SQLite**: Secure, encrypted database for storing sensitive information.
-- **Maven**: Project structure and dependency management.
-- **IntelliJ IDEA**: Integrated Development Environment (IDE) for development.
+### ✨ Features
 
+- **User Authentication**: Users can sign up and log in using their unique credentials.
+- **Admin Controls**: Admins have full control over user accounts and can block/unblock bank cards.
+- **Card Management**: Users can register up to 3 bank cards, view card details, and manage balances.
+- **Transactions**: Users can perform transactions, including withdrawals and transfers, with a daily limit.
+- **Transaction History**: Users can view their transaction history and statistics.
+- **SQLite Database**: All data is securely stored in an encrypted SQLite database.
+
+### 🛠 Configuration
+The application is configured via the application.properties file located in src/main/resources. Here you can set your database URL, encryption key, and other settings.
+
+Make sure to replace the existing encryption key with your own.
+
+### 📝 Usage
+**User Operations:**
+- **Sign Up:** Register a new user with details such as name, birthday, and password.
+- **Log In:** Access your account using your username and password. 
+- **View Cards:** Display details of your registered bank cards. 
+- **Add Card:** Register a new bank card (up to 3 per user). 
+- **Perform Transactions:** Transfer funds between users or withdraw money from an ATM. 
+
+**Admin Operations:**
+- **View All Users:** Display a list of all registered users. 
+- **View All Transactions:** Display all transactions in the system. 
+- **Block/Unblock Cards:** Restrict or restore access to user bank cards.
 ### 🔒 Security
-- **Encrypted Database**: All data is stored in an encrypted SQLite database.
-- **User Roles**: Different rights for **Admin** and **User**.
-- **Authentication**: Secure log in with username and password.
-
-### 🧑‍💼 Admin Capabilities
-- **Full Database Access**: Admins have unrestricted access to the entire database.
-- **Card Management**: Admins can block or unblock user cards.
-
-### 👥 User Capabilities
-- **User Attributes**: Name, surname, birthday, sex, username, password, and registered cards.
-- **Transaction Management**: Users can view and perform transactions with a daily limit.
-- **Card Management**: Users can register up to 3 bank cards.
-- **Statistics**: Users can view monthly transaction statistics (total amount and number of transactions).
-
-### 💳 Bank Cards
-- **Attributes**: Each card has a unique 6-digit ID, owner's username, balance, type (credit or debit), registration date, and a blocking status.
-- **Card Types**: Credit and debit cards.
-- **Card Limits**: Maximum of 3 cards per user.
-
-### 💸 Transactions
-- **Attributes**: Sender and recipient card IDs, date, time, and amount.
-- **Types**:
-    - **User to User (Same Bank)**: Internal transfers between users of the same bank.
-    - **User to User (Different Bank)**: Transfers between users of different banks.
-    - **Withdrawals**: Cash withdrawals where the recipient field stores the ATM's ID.
-
-## 🏗️ Project Structure
-
-### 1. **Main.java**
-- **Purpose**: The entry point of the application.
-- **Functions**: Handles the console interface, manages user authentication, and navigates the start menu.
-
-### 2. **Database Package**
-- **DatabaseManager.java**: Manages all CRUD (Create, Read, Update, Delete) operations in the database.
-- **EncryptionUtil.java**: Ensures all database interactions are securely encrypted and decrypted.
-
-### 3. **Model Package**
-- **User.java**: Defines a user with all necessary attributes like name, surname, etc.
-- **Admin.java**: Inherits from or implements User, with added administrative privileges.
-- **BankCard.java**: Represents a bank card, including details like card type, ID, and owner.
-- **Transaction.java**: Represents a transaction, capturing details like sender, recipient, and amount.
-
-### 4. **Service Package**
-- **UserService.java**: Handles all user-related operations, including registration, login, and transaction viewing.
-- **AdminService.java**: Manages admin-specific tasks such as blocking or unblocking user cards.
-- **TransactionService.java**: Facilitates transaction-related operations, ensuring proper logging and management.
-- **CardService.java**: Oversees card-related actions, including registration and viewing of cards.
-
-### 5. **Util Package**
-- **InputValidator.java**: Validates all user inputs to maintain data integrity and security.
+**Encrypted Database:** The application uses SQLCipher to encrypt the SQLite database, ensuring that all sensitive data is secure.
+### 📊 Statistics (planned)
+Users can view monthly statistics for their transactions, including total transaction amounts and the number of transactions.

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc6a6be6-957d-4fc9-bfa8-832f1b1a1fd9" name="Changes" comment="Implement Main class: the application" />
+    <list default="true" id="fc6a6be6-957d-4fc9-bfa8-832f1b1a1fd9" name="Changes" comment="Implement application properties" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -165,7 +165,31 @@
       <option name="project" value="LOCAL" />
       <updated>1723750083973</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add dependencies for Maven">
+      <option name="closed" value="true" />
+      <created>1723750616207</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1723750616207</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Replace the encryption key">
+      <option name="closed" value="true" />
+      <created>1723750914775</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1723750914775</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Implement application properties">
+      <option name="closed" value="true" />
+      <created>1723750945448</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1723750945448</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -182,6 +206,9 @@
     <MESSAGE value="Add SQLException to viewAllTransactions method" />
     <MESSAGE value="Implement TransactionService" />
     <MESSAGE value="Implement Main class: the application" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Main class: the application" />
+    <MESSAGE value="Add dependencies for Maven" />
+    <MESSAGE value="Replace the encryption key" />
+    <MESSAGE value="Implement application properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement application properties" />
   </component>
 </project>
