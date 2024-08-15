@@ -25,7 +25,7 @@ public class Card {
 
     // Constructor
     public Card(String ownerUsername, double amount, CardType type) {
-        this.id = Card.generateCardId();
+        this.id = generateCardId();
         this.ownerUsername = ownerUsername;
         this.amount = amount;
         this.type = type;
@@ -85,7 +85,7 @@ public class Card {
         this.isBlocked = false;
     }
 
-    // Static method to generate a unique 6-digit card ID
+    // Static method to generate a unique 9-digit card ID
     public static String generateCardId() {
         String newId;
         do {
