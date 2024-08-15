@@ -4,26 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc6a6be6-957d-4fc9-bfa8-832f1b1a1fd9" name="Changes" comment="" />
+    <list default="true" id="fc6a6be6-957d-4fc9-bfa8-832f1b1a1fd9" name="Changes" comment="Implement Main class: the application" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "h-off-nung"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/h-off-nung/core-banking-simulator.git",
+    "accountId": "d98ddbdf-b641-468e-a3b7-94efe045edef"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 1
 }]]></component>
   <component name="ProjectId" id="2khgWANjO7KJkoARfrxKYmAh0Tz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -39,17 +61,127 @@
       <option name="presentableId" value="Default" />
       <updated>1723741252075</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initialize the project">
+      <option name="closed" value="true" />
+      <created>1723741666296</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723741666296</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Implement User class">
+      <option name="closed" value="true" />
+      <created>1723742107665</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723742107665</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Implement Card class">
+      <option name="closed" value="true" />
+      <created>1723744182817</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723744182817</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Implement Transaction class">
+      <option name="closed" value="true" />
+      <created>1723744730826</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723744730826</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implement Admin class">
+      <option name="closed" value="true" />
+      <created>1723744993991</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723744993991</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Implement DatabaseService class">
+      <option name="closed" value="true" />
+      <created>1723745147327</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723745147327</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Implement UserService class">
+      <option name="closed" value="true" />
+      <created>1723745437744</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723745437744</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Implement AdminService class">
+      <option name="closed" value="true" />
+      <created>1723745587314</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1723745587314</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Implement CardService class">
+      <option name="closed" value="true" />
+      <created>1723749474127</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1723749474127</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add SQLException to some methods">
+      <option name="closed" value="true" />
+      <created>1723749491450</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1723749491450</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add SQLException to viewAllTransactions method">
+      <option name="closed" value="true" />
+      <created>1723749678521</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1723749678521</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Implement TransactionService">
+      <option name="closed" value="true" />
+      <created>1723749720180</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1723749720180</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Implement Main class: the application">
+      <option name="closed" value="true" />
+      <created>1723750083973</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1723750083973</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bobrov/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initialize the project" />
+    <MESSAGE value="Implement User class" />
+    <MESSAGE value="Implement Card class" />
+    <MESSAGE value="Implement Transaction class" />
+    <MESSAGE value="Implement Admin class" />
+    <MESSAGE value="Implement DatabaseService class" />
+    <MESSAGE value="Implement UserService class" />
+    <MESSAGE value="Implement AdminService class" />
+    <MESSAGE value="Implement CardService class" />
+    <MESSAGE value="Add SQLException to some methods" />
+    <MESSAGE value="Add SQLException to viewAllTransactions method" />
+    <MESSAGE value="Implement TransactionService" />
+    <MESSAGE value="Implement Main class: the application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Main class: the application" />
   </component>
 </project>
