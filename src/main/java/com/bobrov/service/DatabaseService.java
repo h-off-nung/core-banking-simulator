@@ -10,7 +10,7 @@ import java.sql.Statement;
 public class DatabaseService {
 
     private static final String DB_URL = "jdbc:sqlite:bobrov_bank.db";
-    private static final String ENCRYPTION_KEY = "your-encryption-key"; // Replace with your actual encryption key
+    private static final String ENCRYPTION_KEY = "r4lEPmYGYxrYXR$^mDQ2zF&Oo1&t6%"; // Replace with your actual encryption key
 
     private Connection connection;
 
