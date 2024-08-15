@@ -1,9 +1,10 @@
 ## 🏦 The Core Banking Simulator
 
-Welcome to **The Core Banking Simulator**, a console-based banking application built with Java and SQLite. This project showcases a complete banking system with user authentication, card management, and transaction processing. It's designed to be a solid addition to your portfolio and a great way to improve your coding skills.
+Welcome to **The Core Banking Simulator**, a console-based banking application built with Java and SQLite. This project showcases a complete banking system with user authentication, card management, and transaction processing.
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white) ![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white) ![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
-
+[![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com)
+[![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org)
+[![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)](https://maven.apache.org)
 ### ✨ Features
 
 - **User Authentication**: Users can sign up and log in using their unique credentials.
