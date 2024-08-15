@@ -1,5 +1,8 @@
 package com.bobrov.model;
 
+import com.bobrov.service.UserService;
+
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -112,7 +115,7 @@ public class User {
     }
 
     // Method to log in an existing user
-    public static User logIn(String username, String password, UserService userService) {
+    public static User logIn(String username, String password, UserService userService) throws SQLException {
         User user = userService.authenticateUser(username, password);
         if (user == null) {
             throw new IllegalArgumentException("Invalid username or password.");
