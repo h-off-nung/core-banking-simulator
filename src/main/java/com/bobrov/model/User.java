@@ -11,7 +11,7 @@ public class User {
     private String sex;
     private String username;
     private String password;
-    private List<Card> cards;
+    private final List<Card> cards;
 
     // Constructor
     public User(String name, String surname, LocalDate birthday, String sex, String username, String password) {
