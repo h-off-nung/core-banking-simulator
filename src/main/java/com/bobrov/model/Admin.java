@@ -4,6 +4,7 @@ import com.bobrov.service.CardService;
 import com.bobrov.service.UserService;
 import com.bobrov.service.TransactionService;
 
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -15,11 +16,11 @@ public class Admin extends User {
     }
 
     // Method to block a user's bank card
-    public void blockCard(String cardId, CardService bankCardService) {
-        Card card = bankCardService.getCardById(cardId);
+    public void blockCard(String cardId, CardService CardService) throws SQLException {
+        Card card = CardService.getCardById(cardId);
         if (card != null) {
             card.block();
-            bankCardService.updateCard(card);
+            CardService.updateCard(card);
             System.out.println("Card with ID " + cardId + " has been blocked.");
         } else {
             System.out.println("Card with ID " + cardId + " not found.");
@@ -27,7 +28,7 @@ public class Admin extends User {
     }
 
     // Method to unblock a user's bank card
-    public void unblockCard(String cardId, CardService bankCardService) {
+    public void unblockCard(String cardId, CardService bankCardService) throws SQLException {
         Card card = bankCardService.getCardById(cardId);
         if (card != null) {
             card.unblock();
@@ -39,7 +40,7 @@ public class Admin extends User {
     }
 
     // Method to view all users in the system
-    public void viewAllUsers(UserService userService) {
+    public void viewAllUsers(UserService userService) throws SQLException {
         List<User> users = userService.getAllUsers();
         if (users.isEmpty()) {
             System.out.println("No users found.");
