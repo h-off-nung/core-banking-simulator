@@ -33,5 +33,5 @@ Make sure to replace the existing encryption key with your own.
 - **Block/Unblock Cards:** Restrict or restore access to user bank cards.
 ### 🔒 Security
 **Encrypted Database:** The application uses SQLCipher to encrypt the SQLite database, ensuring that all sensitive data is secure.
-### 📊 Statistics (planned)
+### 📊 Statistics (idea)
 Users can view monthly statistics for their transactions, including total transaction amounts and the number of transactions.

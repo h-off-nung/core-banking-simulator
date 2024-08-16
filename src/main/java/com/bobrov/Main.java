@@ -46,7 +46,7 @@ public class Main {
 
     private static void showMainMenu() throws SQLException {
         while (true) {
-            System.out.println("\n--- Bobrov Service ---");
+            System.out.println("\n--- Bobrov Bank ---");
             System.out.println("1. Log In");
             System.out.println("2. Sign Up");
             System.out.println("3. Exit");

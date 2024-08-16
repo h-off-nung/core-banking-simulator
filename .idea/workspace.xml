@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc6a6be6-957d-4fc9-bfa8-832f1b1a1fd9" name="Changes" comment="Implement application properties" />
+    <list default="true" id="fc6a6be6-957d-4fc9-bfa8-832f1b1a1fd9" name="Changes" comment="Update readme file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/service/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,21 +25,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "h-off-nung"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;h-off-nung&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/h-off-nung/core-banking-simulator.git",
-    "accountId": "d98ddbdf-b641-468e-a3b7-94efe045edef"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/h-off-nung/core-banking-simulator.git&quot;,
+    &quot;accountId&quot;: &quot;d98ddbdf-b641-468e-a3b7-94efe045edef&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2khgWANjO7KJkoARfrxKYmAh0Tz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -49,7 +54,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/h-off-nung/Code/IdeaProjects/core-banking-simulator/src/main/java/com/bobrov/Main.java"
+    "onboarding.tips.debug.path": "C:/Users/h-off-nung/Code/IdeaProjects/core-banking-simulator/src/main/java/com/bobrov/Main.java",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "promo.database"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -189,7 +198,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723750945448</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Rewrite readme file">
+      <option name="closed" value="true" />
+      <created>1723752588480</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1723752588480</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Update readme file">
+      <option name="closed" value="true" />
+      <created>1723752733338</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1723752733338</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -209,6 +234,8 @@
     <MESSAGE value="Add dependencies for Maven" />
     <MESSAGE value="Replace the encryption key" />
     <MESSAGE value="Implement application properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement application properties" />
+    <MESSAGE value="Rewrite readme file" />
+    <MESSAGE value="Update readme file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update readme file" />
   </component>
 </project>
