@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc6a6be6-957d-4fc9-bfa8-832f1b1a1fd9" name="Changes" comment="Do small renaming">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="fc6a6be6-957d-4fc9-bfa8-832f1b1a1fd9" name="Changes" comment="Implement AdminServiceTest class" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -219,7 +217,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723808978651</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Implement UserServiceTest class">
+      <option name="closed" value="true" />
+      <created>1723903469126</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1723903469126</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Implement AdminServiceTest class">
+      <option name="closed" value="true" />
+      <created>1723903717084</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1723903717084</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -242,6 +256,8 @@
     <MESSAGE value="Rewrite readme file" />
     <MESSAGE value="Update readme file" />
     <MESSAGE value="Do small renaming" />
-    <option name="LAST_COMMIT_MESSAGE" value="Do small renaming" />
+    <MESSAGE value="Implement UserServiceTest class" />
+    <MESSAGE value="Implement AdminServiceTest class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement AdminServiceTest class" />
   </component>
 </project>
