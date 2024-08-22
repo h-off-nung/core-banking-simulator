@@ -29,7 +29,45 @@ public class DatabaseService {
         }
     }
 
-    // Method to execute a non-query SQL command (INSERT, UPDATE, DELETE)
+    // Method to create necessary tables in the database
+    public void createTables() throws SQLException {
+        String createUsersTable = "CREATE TABLE IF NOT EXISTS users (" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "name TEXT NOT NULL, " +
+                "surname TEXT NOT NULL, " +
+                "birthday TEXT NOT NULL, " +
+                "sex TEXT NOT NULL, " +
+                "username TEXT UNIQUE NOT NULL, " +
+                "password TEXT NOT NULL)";
+
+        String createBankCardsTable = "CREATE TABLE IF NOT EXISTS bank_cards (" +
+                "id TEXT PRIMARY KEY, " +
+                "ownerUsername TEXT NOT NULL, " +
+                "amount REAL NOT NULL, " +
+                "type TEXT NOT NULL, " +
+                "registerDate TEXT NOT NULL, " +
+                "isBlocked INTEGER NOT NULL, " +
+                "FOREIGN KEY(ownerUsername) REFERENCES users(username))";
+
+        String createTransactionsTable = "CREATE TABLE IF NOT EXISTS transactions (" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "senderCardId TEXT NOT NULL, " +
+                "recipientCardId TEXT NOT NULL, " +
+                "dateTime TEXT NOT NULL, " +
+                "amount REAL NOT NULL, " +
+                "type TEXT NOT NULL, " +
+                "FOREIGN KEY(senderCardId) REFERENCES bank_cards(id), " +
+                "FOREIGN KEY(recipientCardId) REFERENCES bank_cards(id))";
+
+        // Execute the table creation statements
+        executeUpdate(createUsersTable);
+        executeUpdate(createBankCardsTable);
+        executeUpdate(createTransactionsTable);
+
+        System.out.println("Tables created successfully.");
+    }
+
+// Method to execute a non-query SQL command (INSERT, UPDATE, DELETE)
     public void executeUpdate(String sql) throws SQLException {
         try (Statement stmt = connection.createStatement()) {
             stmt.executeUpdate(sql);

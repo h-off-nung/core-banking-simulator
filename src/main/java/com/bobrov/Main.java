@@ -29,6 +29,7 @@ public class Main {
             // Initialize services
             databaseService = new DatabaseService();
             databaseService.connect();
+            databaseService.createTables();
 
             userService = new UserService(databaseService);
             bankCardService = new CardService(databaseService);
