@@ -14,13 +14,13 @@ public class DatabaseService {
 
     private Connection connection;
 
-    // Method to connect to the database
+    // Method to connect to the database with encryption
     public void connect() throws SQLException {
         try {
             // Load the SQLite JDBC driver (if not already loaded)
             Class.forName("org.sqlite.JDBC");
             // Set up the connection with encryption enabled
-            this.connection = DriverManager.getConnection(DB_URL + "?cipher=sqlcipher&key=" + ENCRYPTION_KEY);
+            this.connection = DriverManager.getConnection(DB_URL, "", ENCRYPTION_KEY);
             System.out.println("Connected to the database successfully.");
         } catch (ClassNotFoundException e) {
             throw new SQLException("SQLite JDBC driver not found.", e);
