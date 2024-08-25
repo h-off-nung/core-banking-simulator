@@ -17,7 +17,6 @@ public class TransactionService {
         this.databaseService = databaseService;
     }
 
-    // Method to create a new transaction and store it in the database
     public void createTransaction(Transaction transaction) throws SQLException {
         String sql = "INSERT INTO transactions (senderCardId, recipientCardId, dateTime, amount, type) VALUES (?, ?, ?, ?, ?)";
         databaseService.executePreparedUpdate(sql,
@@ -29,7 +28,6 @@ public class TransactionService {
         System.out.println("Transaction created successfully.");
     }
 
-    // Method to retrieve all transactions for a specific bank card
     public List<Transaction> getTransactionsByCardId(String cardId) throws SQLException {
         List<Transaction> transactions = new ArrayList<>();
         String sql = "SELECT * FROM transactions WHERE senderCardId = ? OR recipientCardId = ?";
@@ -47,7 +45,6 @@ public class TransactionService {
         return transactions;
     }
 
-    // Method to retrieve all transactions in the system
     public List<Transaction> getAllTransactions() throws SQLException {
         List<Transaction> transactions = new ArrayList<>();
         String sql = "SELECT * FROM transactions";
