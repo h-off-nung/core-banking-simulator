@@ -30,11 +30,10 @@ public class Main {
             databaseService = new DatabaseService();
             databaseService.connect();
             databaseService.createTables();
-
             userService = new UserService(databaseService);
             bankCardService = new CardService(databaseService);
             transactionService = new TransactionService(databaseService);
-            adminService = new AdminService(userService, bankCardService, transactionService);
+            adminService = new AdminService(databaseService, userService, bankCardService, transactionService);
 
             // Start the application
             showMainMenu();
@@ -77,13 +76,12 @@ public class Main {
         System.out.print("Password: ");
         String password = scanner.nextLine();
 
-        User user = userService.authenticateUser(username, password);
-        if (user == null) {
-            System.out.println("Invalid username or password.");
-        } else if (user instanceof Admin) {
-            showAdminMenu((Admin) user);
+        if (adminService.isPersonAdmin(username, password) == 1) {
+            showAdminMenu(adminService.authenticateAdmin(username, password));
+        } else if (adminService.isPersonAdmin(username, password) == 0) {
+            showUserMenu(userService.authenticateUser(username, password));
         } else {
-            showUserMenu(user);
+            System.out.println("Invalid username or password.");
         }
     }
 
@@ -222,9 +220,23 @@ public class Main {
         }
     }
 
+
     private static void performTransaction(User user) throws SQLException {
-        System.out.print("Sender Card ID: ");
-        String senderCardId = scanner.nextLine();
+        List<Card> userCards = bankCardService.getCardsByUser(user.getUsername());
+        if (userCards.isEmpty()) {
+            System.out.println("No cards found for user " + user.getUsername());
+            return;
+        }
+        System.out.println("Choose a card to perform a transaction:");
+        for (int i = 0; i < userCards.size(); i++) {
+            System.out.println(i + 1 + ". Card ID: " + userCards.get(i).getId() + ", Balance: " + userCards.get(i).getAmount() + ", Type: " + userCards.get(i).getType());
+        }
+        int choice = scanner.nextInt();
+        if (choice < 1 || choice > userCards.size()) {
+            System.out.println("Invalid choice.");
+            return;
+        }
+        Card senderCard = userCards.get(choice - 1);
         System.out.print("Recipient Card ID: ");
         String recipientCardId = scanner.nextLine();
         System.out.print("Amount: ");
@@ -233,10 +245,27 @@ public class Main {
         System.out.print("Transaction Type (USER_TO_USER_SAME_BANK/USER_TO_USER_DIFFERENT_BANK/WITHDRAWAL): ");
         Transaction.TransactionType type = Transaction.TransactionType.valueOf(scanner.nextLine().toUpperCase());
 
-        Transaction newTransaction = new Transaction(senderCardId, recipientCardId, amount, type);
+        Transaction newTransaction = new Transaction(senderCard.getId(), recipientCardId, amount, type);
         transactionService.createTransaction(newTransaction);
         System.out.println("Transaction performed successfully.");
     }
+
+    // Old version
+//    private static void performTransaction(User user) throws SQLException {
+//        System.out.print("Sender Card ID: ");
+//        String senderCardId = scanner.nextLine();
+//        System.out.print("Recipient Card ID: ");
+//        String recipientCardId = scanner.nextLine();
+//        System.out.print("Amount: ");
+//        double amount = scanner.nextDouble();
+//        scanner.nextLine(); // Consume newline
+//        System.out.print("Transaction Type (USER_TO_USER_SAME_BANK/USER_TO_USER_DIFFERENT_BANK/WITHDRAWAL): ");
+//        Transaction.TransactionType type = Transaction.TransactionType.valueOf(scanner.nextLine().toUpperCase());
+//
+//        Transaction newTransaction = new Transaction(senderCardId, recipientCardId, amount, type);
+//        transactionService.createTransaction(newTransaction);
+//        System.out.println("Transaction performed successfully.");
+//    }
 
     private static void viewUserStatistics(User user) {
         // Implement the logic to view statistics, like amount and transactions number of a month
