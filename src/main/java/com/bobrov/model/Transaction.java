@@ -11,7 +11,7 @@ public class Transaction {
     private final String senderCardId;       // ID of the sender's bank card
     private final String recipientCardId;    // ID of the recipient's bank card (or ATM ID for withdrawals)
     private final LocalDateTime dateTime;    // Date and time of the transaction
-    private double amount;             // Transaction amount
+    private final double amount;             // Transaction amount
     private final TransactionType type;      // Type of transaction (User to User, Withdrawal, etc.)
 
 
@@ -53,15 +53,10 @@ public class Transaction {
         return amount;
     }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
     public TransactionType getType() {
         return type;
     }
 
-    // Method to log transaction details
     public String logTransaction() {
         return "Transaction Details: \n" +
                 "Sender Card ID: " + senderCardId + "\n" +
@@ -69,16 +64,6 @@ public class Transaction {
                 "Date and Time: " + dateTime.toString() + "\n" +
                 "Amount: " + amount + "\n" +
                 "Type: " + type;
-    }
-
-    // Method to check if the transaction is between users of the same bank
-    public boolean isSameBank() {
-        return type == TransactionType.USER_TO_USER_SAME_BANK;
-    }
-
-    // Method to check if the transaction is a withdrawal
-    public boolean isWithdrawal() {
-        return type == TransactionType.WITHDRAWAL;
     }
 
     // Static method to generate a unique 9-digit card ID
