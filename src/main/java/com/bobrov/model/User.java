@@ -14,6 +14,7 @@ public class User {
     private String sex;
     private String username;
     private String password;
+    private int isAdmin = 0;
     private final List<Card> cards;
 
     // Constructor
@@ -39,6 +40,10 @@ public class User {
 
     public String getSurname() {
         return surname;
+    }
+
+    public int getIsAdmin() {
+        return isAdmin;
     }
 
     public void setSurname(String surname) {
