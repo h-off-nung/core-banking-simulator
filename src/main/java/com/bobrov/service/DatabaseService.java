@@ -31,32 +31,24 @@ public class DatabaseService {
 
     // Method to create necessary tables in the database
     public void createTables() throws SQLException {
-        String createUsersTable = "CREATE TABLE IF NOT EXISTS users (" +
+        String createPeopleTable = "CREATE TABLE IF NOT EXISTS people (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "name TEXT NOT NULL, " +
                 "surname TEXT NOT NULL, " +
                 "birthday TEXT NOT NULL, " +
                 "sex TEXT NOT NULL, " +
                 "username TEXT UNIQUE NOT NULL, " +
-                "password TEXT NOT NULL)";
+                "password TEXT NOT NULL, " +
+                "isAdmin INTEGER NOT NULL)";
 
-        String createAdminsTable = "CREATE TABLE IF NOT EXISTS admins (" +
-                "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "name TEXT NOT NULL, " +
-                "surname TEXT NOT NULL, " +
-                "birthday TEXT NOT NULL, " +
-                "sex TEXT NOT NULL, " +
-                "username TEXT UNIQUE NOT NULL, " +
-                "password TEXT NOT NULL)";
-
-        String createBankCardsTable = "CREATE TABLE IF NOT EXISTS bank_cards (" +
+        String createCardsTable = "CREATE TABLE IF NOT EXISTS cards (" +
                 "id TEXT PRIMARY KEY, " +
                 "ownerUsername TEXT NOT NULL, " +
                 "amount REAL NOT NULL, " +
                 "type TEXT NOT NULL, " +
                 "registerDate TEXT NOT NULL, " +
                 "isBlocked INTEGER NOT NULL, " +
-                "FOREIGN KEY(ownerUsername) REFERENCES users(username))";
+                "FOREIGN KEY(ownerUsername) REFERENCES people(username))";
 
         String createTransactionsTable = "CREATE TABLE IF NOT EXISTS transactions (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
@@ -65,12 +57,12 @@ public class DatabaseService {
                 "dateTime TEXT NOT NULL, " +
                 "amount REAL NOT NULL, " +
                 "type TEXT NOT NULL, " +
-                "FOREIGN KEY(senderCardId) REFERENCES bank_cards(id), " +
-                "FOREIGN KEY(recipientCardId) REFERENCES bank_cards(id))";
+                "FOREIGN KEY(senderCardId) REFERENCES cards(id), " +
+                "FOREIGN KEY(recipientCardId) REFERENCES cards(id))";
 
         // Execute the table creation statements
-        executeUpdate(createUsersTable);
-        executeUpdate(createBankCardsTable);
+        executeUpdate(createPeopleTable);
+        executeUpdate(createCardsTable);
         executeUpdate(createTransactionsTable);
 
         System.out.println("Tables created successfully.");
