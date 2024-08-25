@@ -40,6 +40,15 @@ public class DatabaseService {
                 "username TEXT UNIQUE NOT NULL, " +
                 "password TEXT NOT NULL)";
 
+        String createAdminsTable = "CREATE TABLE IF NOT EXISTS admins (" +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                "name TEXT NOT NULL, " +
+                "surname TEXT NOT NULL, " +
+                "birthday TEXT NOT NULL, " +
+                "sex TEXT NOT NULL, " +
+                "username TEXT UNIQUE NOT NULL, " +
+                "password TEXT NOT NULL)";
+
         String createBankCardsTable = "CREATE TABLE IF NOT EXISTS bank_cards (" +
                 "id TEXT PRIMARY KEY, " +
                 "ownerUsername TEXT NOT NULL, " +
