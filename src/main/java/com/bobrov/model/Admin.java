@@ -9,10 +9,15 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Admin extends User {
+    private int isAdmin = 1;
 
     // Constructor
     public Admin(String name, String surname, LocalDate birthday, String sex, String username, String password) {
         super(name, surname, birthday, sex, username, password);
+    }
+
+    public int getIsAdmin() {
+        return isAdmin;
     }
 
     // Method to block a user's bank card
