@@ -1,5 +1,6 @@
 package com.bobrov.model;
 
+import com.bobrov.service.CardService;
 import com.bobrov.service.UserService;
 
 import java.sql.SQLException;
@@ -64,18 +65,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public List<Card> getCards() {
-        return cards;
-    }
-
-    public void addCard(Card card) {
-        if (this.cards.size() < 3) {
-            this.cards.add(card);
-        } else {
-            throw new IllegalStateException("Maximum number of cards (3) already registered.");
-        }
     }
 
     public static User signUp(String name, String surname, LocalDate birthday, String sex, String username, String password) {

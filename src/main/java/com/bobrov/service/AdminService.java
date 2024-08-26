@@ -71,7 +71,6 @@ public class AdminService {
 
 
 
-    // Method to block a user's bank card
     public void blockCard(String cardId) throws SQLException {
         Card card = bankCardService.getCardById(cardId);
         if (card != null) {
@@ -83,7 +82,6 @@ public class AdminService {
         }
     }
 
-    // Method to unblock a user's bank card
     public void unblockCard(String cardId) throws SQLException {
         Card card = bankCardService.getCardById(cardId);
         if (card != null) {
@@ -95,7 +93,6 @@ public class AdminService {
         }
     }
 
-    // Method to view all users in the system
     public void viewAllUsers() throws SQLException {
         List<User> users = userService.getAllUsers();
         if (users.isEmpty()) {
@@ -137,7 +134,6 @@ public class AdminService {
         return admins;
     }
 
-    // Method to view all transactions in the system
     public void viewAllTransactions() throws SQLException {
         List<Transaction> transactions = transactionService.getAllTransactions();
         if (transactions.isEmpty()) {

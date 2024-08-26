@@ -30,7 +30,7 @@ public class AdminServiceTest {
         userService = new UserService(databaseService);
         bankCardService = new CardService(databaseService);
         transactionService = new TransactionService(databaseService);
-        adminService = new AdminService(userService, bankCardService, transactionService);
+        adminService = new AdminService(databaseService, userService, bankCardService, transactionService);
 
         // Set up a clean state before each test
         databaseService.executeUpdate("DROP TABLE IF EXISTS users");

@@ -58,12 +58,13 @@ public class Transaction {
     }
 
     public String logTransaction() {
-        return "Transaction Details: \n" +
-                "Sender Card ID: " + senderCardId + "\n" +
-                "Recipient Card ID: " + recipientCardId + "\n" +
-                "Date and Time: " + dateTime.toString() + "\n" +
-                "Amount: " + amount + "\n" +
-                "Type: " + type;
+        return "|----------------------------------------------------------------------------------| \n" +
+                "| Transaction Details: \n" +
+                "|---------------------------------------------------------------------------------| \n" +
+                "| Sender Card ID:  " + String.format("%-20s", senderCardId) + " | Recipient Card ID: " + String.format("%-20s", recipientCardId) + "\n" +
+                "| Date and Time:    " + String.format("%-20s", dateTime.toString()) + " | Amount: " + String.format("%-20s", amount) + "\n" +
+                "| Type:            " + String.format("%-20s", type) + "\n" +
+                "|---------------------------------------------------------------------------------|";
     }
 
     // Static method to generate a unique 9-digit card ID

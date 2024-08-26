@@ -12,7 +12,6 @@ public class UserService {
 
     private final DatabaseService databaseService;
 
-    // Constructor
     public UserService(DatabaseService databaseService) {
         this.databaseService = databaseService;
     }

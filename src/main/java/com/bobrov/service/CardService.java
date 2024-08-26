@@ -12,7 +12,6 @@ public class CardService {
 
     private final DatabaseService databaseService;
 
-    // Constructor
     public CardService(DatabaseService databaseService) {
         this.databaseService = databaseService;
     }
@@ -35,6 +34,7 @@ public class CardService {
 
         if (resultSet.next()) {
             return new Card(
+                    resultSet.getString("id"),
                     resultSet.getString("ownerUsername"),
                     resultSet.getDouble("amount"),
                     Card.CardType.valueOf(resultSet.getString("type"))

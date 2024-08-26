@@ -23,7 +23,6 @@ public class Card {
         DEBIT
     }
 
-    // Constructor
     public Card(String ownerUsername, double amount, CardType type) {
         this.id = generateCardId();
         this.ownerUsername = ownerUsername;
@@ -44,7 +43,6 @@ public class Card {
         this.isBlocked = false;
     }
 
-    // Getters and setters
     public String getId() {
         return id;
     }
