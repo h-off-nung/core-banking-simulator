@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc6a6be6-957d-4fc9-bfa8-832f1b1a1fd9" name="Changes" comment="Refactor the whole system">
+    <list default="true" id="fc6a6be6-957d-4fc9-bfa8-832f1b1a1fd9" name="Changes" comment="Clean the main class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/model/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/service/CardService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +38,9 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -106,7 +106,7 @@
       <workItem from="1724573988131" duration="5049000" />
       <workItem from="1724597832645" duration="12088000" />
       <workItem from="1724658728524" duration="70000" />
-      <workItem from="1724658832307" duration="10312000" />
+      <workItem from="1724658832307" duration="11656000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize the project">
       <option name="closed" value="true" />
@@ -404,7 +404,47 @@
       <option name="project" value="LOCAL" />
       <updated>1724669219840</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Fix the issue with blocking a card">
+      <option name="closed" value="true" />
+      <created>1724672482845</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1724672482845</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Remove the unnecessary parameter 'transactions'">
+      <option name="closed" value="true" />
+      <created>1724672613038</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1724672613038</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Remove unused packages">
+      <option name="closed" value="true" />
+      <created>1724672654801</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1724672654801</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Comment the section of creating an admin">
+      <option name="closed" value="true" />
+      <created>1724673496814</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1724673496814</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Clean the main class">
+      <option name="closed" value="true" />
+      <created>1724673650912</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1724673650912</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,11 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add SQLException to viewAllTransactions method" />
-    <MESSAGE value="Implement TransactionService" />
-    <MESSAGE value="Implement Main class: the application" />
-    <MESSAGE value="Add dependencies for Maven" />
-    <MESSAGE value="Replace the encryption key" />
     <MESSAGE value="Implement application properties" />
     <MESSAGE value="Rewrite readme file" />
     <MESSAGE value="Update readme file" />
@@ -447,6 +482,11 @@
     <MESSAGE value="Remove unnecessary methods" />
     <MESSAGE value="Remove unnecessary comments" />
     <MESSAGE value="Refactor the whole system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor the whole system" />
+    <MESSAGE value="Fix the issue with blocking a card" />
+    <MESSAGE value="Remove the unnecessary parameter 'transactions'" />
+    <MESSAGE value="Remove unused packages" />
+    <MESSAGE value="Comment the section of creating an admin" />
+    <MESSAGE value="Clean the main class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean the main class" />
   </component>
 </project>
