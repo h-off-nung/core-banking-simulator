@@ -37,7 +37,9 @@ public class CardService {
                     resultSet.getString("id"),
                     resultSet.getString("ownerUsername"),
                     resultSet.getDouble("amount"),
-                    Card.CardType.valueOf(resultSet.getString("type"))
+                    Card.CardType.valueOf(resultSet.getString("type")),
+                    LocalDate.parse(resultSet.getString("registerDate")),
+                    resultSet.getBoolean("isBlocked")
             );
         } else {
             return null;
@@ -66,7 +68,9 @@ public class CardService {
                     resultSet.getString("id"),
                     resultSet.getString("ownerUsername"),
                     resultSet.getDouble("amount"),
-                    Card.CardType.valueOf(resultSet.getString("type"))
+                    Card.CardType.valueOf(resultSet.getString("type")),
+                    LocalDate.parse(resultSet.getString("registerDate")),
+                    resultSet.getBoolean("isBlocked")
             ));
         }
 

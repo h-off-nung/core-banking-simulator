@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc6a6be6-957d-4fc9-bfa8-832f1b1a1fd9" name="Changes" comment="Remove unnecessary comments">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="fc6a6be6-957d-4fc9-bfa8-832f1b1a1fd9" name="Changes" comment="Refactor the whole system">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/model/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/model/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/model/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/model/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/model/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/service/AdminService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/service/CardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/service/CardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/service/TransactionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/service/TransactionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/bobrov/service/AdminServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bobrov/service/AdminServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +106,7 @@
       <workItem from="1724573988131" duration="5049000" />
       <workItem from="1724597832645" duration="12088000" />
       <workItem from="1724658728524" duration="70000" />
-      <workItem from="1724658832307" duration="7055000" />
+      <workItem from="1724658832307" duration="10312000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize the project">
       <option name="closed" value="true" />
@@ -404,7 +396,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724609778470</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Refactor the whole system">
+      <option name="closed" value="true" />
+      <created>1724669219840</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1724669219840</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,7 +422,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add SQLException to some methods" />
     <MESSAGE value="Add SQLException to viewAllTransactions method" />
     <MESSAGE value="Implement TransactionService" />
     <MESSAGE value="Implement Main class: the application" />
@@ -447,6 +446,7 @@
     <MESSAGE value="Fix the issue with admin logging in" />
     <MESSAGE value="Remove unnecessary methods" />
     <MESSAGE value="Remove unnecessary comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary comments" />
+    <MESSAGE value="Refactor the whole system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor the whole system" />
   </component>
 </project>

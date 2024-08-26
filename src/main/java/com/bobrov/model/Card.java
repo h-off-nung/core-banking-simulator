@@ -33,14 +33,14 @@ public class Card {
         this.isBlocked = false;
     }
 
-    public Card(String id, String ownerUsername, double amount, CardType type) {
+    public Card(String id, String ownerUsername, double amount, CardType type, LocalDate registerDate, boolean isBlocked) {
         this.id = id;
         this.ownerUsername = ownerUsername;
         this.amount = amount;
         this.type = type;
-        this.registerDate = LocalDate.now();
+        this.registerDate = registerDate;
         this.transactions = new ArrayList<>();
-        this.isBlocked = false;
+        this.isBlocked = isBlocked;
     }
 
     public String getId() {
