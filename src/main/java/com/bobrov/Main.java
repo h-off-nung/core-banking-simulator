@@ -1,6 +1,5 @@
 package com.bobrov;
 
-import com.bobrov.model.Admin;
 import com.bobrov.model.User;
 import com.bobrov.model.Card;
 import com.bobrov.model.Transaction;
@@ -83,7 +82,7 @@ public class Main {
         String password = scanner.nextLine();
 
         if (adminService.isPersonAdmin(username, password) == 1) {
-            showAdminMenu(adminService.authenticateAdmin(username, password));
+            showAdminMenu();
         } else if (adminService.isPersonAdmin(username, password) == 0) {
             showUserMenu(userService.authenticateUser(username, password));
         } else {
@@ -137,7 +136,7 @@ public class Main {
                     performTransaction(user);
                     break;
                 case 5:
-                    viewUserStatistics(user);
+                    viewUserStatistics();
                     break;
                 case 6:
                     System.out.println("Logging out...");
@@ -148,7 +147,7 @@ public class Main {
         }
     }
 
-    private static void showAdminMenu(Admin admin) throws SQLException {
+    private static void showAdminMenu() throws SQLException {
         while (true) {
             System.out.println("\n--- Admin Menu ---");
             System.out.println("1. View All Users");
@@ -187,9 +186,7 @@ public class Main {
         if (cards.isEmpty()) {
             System.out.println("You have no cards.");
         } else {
-            cards.forEach(card -> {
-                System.out.println("Card ID: " + card.getId() + ", Balance: " + card.getAmount() + ", Type: " + card.getType());
-            });
+            cards.forEach(card -> System.out.println("Card ID: " + card.getId() + ", Balance: " + card.getAmount() + ", Type: " + card.getType()));
         }
     }
 
@@ -239,9 +236,7 @@ public class Main {
         if (transactions.isEmpty()) {
             System.out.println("No transactions found for card " + card.getId());
         } else {
-            transactions.forEach(transaction -> {
-                System.out.println(transaction.logTransaction());
-            });
+            transactions.forEach(transaction -> System.out.println(transaction.logTransaction()));
         }
     }
 
@@ -297,7 +292,7 @@ public class Main {
         }
     }
 
-    private static void viewUserStatistics(User user) {
+    private static void viewUserStatistics() {
         // Implement the logic to view statistics, like amount and transactions number of a month
         System.out.println("Statistics feature is not implemented yet.");
     }
