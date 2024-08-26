@@ -34,12 +34,13 @@ public class Main {
             CardService = new CardService(databaseService);
             transactionService = new TransactionService(databaseService);
             adminService = new AdminService(databaseService, userService, CardService, transactionService);
-            try {
-                Admin newAdmin = new Admin("Marques", "Brownlee", LocalDate.of(1993, 12, 3), "m", "mkbhd", "quality tech videos");
-                adminService.createAdmin(newAdmin);
-            } catch (SQLException e) {
-                System.out.println("Error creating admin: " + e.getMessage());
-            }
+            // Create an admin
+//            try {
+//                Admin newAdmin = new Admin("Marques", "Brownlee", LocalDate.of(1993, 12, 3), "m", "mkbhd", "quality tech videos");
+//                adminService.createAdmin(newAdmin);
+//            } catch (SQLException e) {
+//                System.out.println("Error creating admin: " + e.getMessage());
+//            }
             // Start the application
             showMainMenu();
         } catch (SQLException e) {
