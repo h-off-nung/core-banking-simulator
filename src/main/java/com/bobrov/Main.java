@@ -61,15 +61,19 @@ public class Main {
 
             switch (choice) {
                 case 1:
+                    System.out.println();
                     logIn();
                     break;
                 case 2:
+                    System.out.println();
                     signUp();
                     break;
                 case 3:
+                    System.out.println();
                     System.out.println("Exiting...");
                     return;
                 default:
+                    System.out.println();
                     System.out.println("Invalid option. Please try again.");
             }
         }
@@ -82,8 +86,12 @@ public class Main {
         String password = scanner.nextLine();
 
         if (adminService.isPersonAdmin(username, password) == 1) {
+            System.out.println("Admin logged in successfully.");
+            System.out.println("Welcome, " + adminService.getAdminName(username, password) + "!");
             showAdminMenu();
         } else if (adminService.isPersonAdmin(username, password) == 0) {
+            System.out.println("User logged in successfully.");
+            System.out.println("Welcome, " + userService.getUserName(username, password) + "!");
             showUserMenu(userService.authenticateUser(username, password));
         } else {
             System.out.println("Invalid username or password.");
@@ -124,24 +132,31 @@ public class Main {
 
             switch (choice) {
                 case 1:
+                    System.out.println();
                     viewUserCards(user);
                     break;
                 case 2:
+                    System.out.println();
                     addUserCard(user);
                     break;
                 case 3:
+                    System.out.println();
                     viewUserTransactions(user);
                     break;
                 case 4:
+                    System.out.println();
                     performTransaction(user);
                     break;
                 case 5:
+                    System.out.println();
                     viewUserStatistics();
                     break;
                 case 6:
+                    System.out.println();
                     System.out.println("Logging out...");
                     return;
                 default:
+                    System.out.println();
                     System.out.println("Invalid option. Please try again.");
             }
         }
@@ -161,21 +176,27 @@ public class Main {
 
             switch (choice) {
                 case 1:
+                    System.out.println();
                     adminService.viewAllUsers();
                     break;
                 case 2:
+                    System.out.println();
                     adminService.viewAllTransactions();
                     break;
                 case 3:
+                    System.out.println();
                     blockCard();
                     break;
                 case 4:
+                    System.out.println();
                     unblockCard();
                     break;
                 case 5:
+                    System.out.println();
                     System.out.println("Logging out...");
                     return;
                 default:
+                    System.out.println();
                     System.out.println("Invalid option. Please try again.");
             }
         }
@@ -266,7 +287,11 @@ public class Main {
             System.out.println("Insufficient balance.");
             return;
         }
-        System.out.print("Enter transaction type number (1 - User to user same bank, 2 - User to user different bank, 3 - Withdrawal): ");
+        System.out.print("Enter transaction type number. \n" +
+                "           1 - User to user same bank, \n" +
+                "           2 - User to user different bank, \n" +
+                "           3 - Withdrawal \n" +
+                "           Choice: ");
         int typeChoice = scanner.nextInt();
         scanner.nextLine(); // Consume newline
         Transaction.TransactionType type;

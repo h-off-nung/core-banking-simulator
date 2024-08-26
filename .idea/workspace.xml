@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc6a6be6-957d-4fc9-bfa8-832f1b1a1fd9" name="Changes" comment="Upload all settings">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/bobrov/service/AdminServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bobrov/service/AdminServiceTest.java" afterDir="false" />
+    <list default="true" id="fc6a6be6-957d-4fc9-bfa8-832f1b1a1fd9" name="Changes" comment="Improve terminal ui">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bobrov_bank.db" beforeDir="false" afterPath="$PROJECT_DIR$/bobrov_bank.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/service/AdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/service/AdminService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bobrov/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bobrov/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +110,7 @@
       <workItem from="1724573988131" duration="5049000" />
       <workItem from="1724597832645" duration="12088000" />
       <workItem from="1724658728524" duration="70000" />
-      <workItem from="1724658832307" duration="12341000" />
+      <workItem from="1724658832307" duration="15664000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize the project">
       <option name="closed" value="true" />
@@ -452,7 +456,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724673851110</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Remove tests">
+      <option name="closed" value="true" />
+      <created>1724674441372</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1724674441372</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,8 +482,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rewrite readme file" />
-    <MESSAGE value="Update readme file" />
     <MESSAGE value="Do small renaming" />
     <MESSAGE value="Implement UserServiceTest class" />
     <MESSAGE value="Implement AdminServiceTest class" />
@@ -495,6 +505,8 @@
     <MESSAGE value="Comment the section of creating an admin" />
     <MESSAGE value="Clean the main class" />
     <MESSAGE value="Upload all settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upload all settings" />
+    <MESSAGE value="Remove tests" />
+    <MESSAGE value="Improve terminal ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve terminal ui" />
   </component>
 </project>

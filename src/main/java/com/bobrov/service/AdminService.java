@@ -26,6 +26,15 @@ public class AdminService {
         this.transactionService = transactionService;
     }
 
+    public String getAdminName(String username, String password) throws SQLException {
+        String sql = "SELECT name FROM people WHERE username = ? AND password = ?";
+        ResultSet resultSet = databaseService.executePreparedQuery(sql, username, password);
+        if (resultSet.next()) {
+            return resultSet.getString("name") + " " + resultSet.getString("surname");
+        }
+        return null;
+    }
+
     public void createAdmin(Admin admin) throws SQLException {
         String sql = "INSERT INTO people (name, surname, birthday, sex, username, password, isAdmin) VALUES (?, ?, ?, ?, ?, ?, ?)";
         databaseService.executePreparedUpdate(sql,

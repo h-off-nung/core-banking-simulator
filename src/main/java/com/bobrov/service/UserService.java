@@ -16,6 +16,15 @@ public class UserService {
         this.databaseService = databaseService;
     }
 
+    public String getUserName(String username, String password) throws SQLException {
+        String sql = "SELECT username FROM people WHERE username = ? AND password = ?";
+        ResultSet resultSet = databaseService.executePreparedQuery(sql, username, password);
+        if (resultSet.next()) {
+            return resultSet.getString("username") + " " + resultSet.getString("surname");
+        }
+        return null;
+    }
+
     public void createUser(User user) throws SQLException {
         String sql = "INSERT INTO people (name, surname, birthday, sex, username, password, isAdmin) VALUES (?, ?, ?, ?, ?, ?, ?)";
         databaseService.executePreparedUpdate(sql,
