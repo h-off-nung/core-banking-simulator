@@ -14,7 +14,6 @@ public class Card {
     private double amount;                         // Current balance
     private final CardType type;
     private final LocalDate registerDate;
-    private final List<Transaction> transactions;
     private boolean isBlocked;
 
     // Enum for CardType (Credit or Debit)
@@ -29,7 +28,6 @@ public class Card {
         this.amount = amount;
         this.type = type;
         this.registerDate = LocalDate.now();
-        this.transactions = new ArrayList<>();
         this.isBlocked = false;
     }
 
@@ -39,7 +37,6 @@ public class Card {
         this.amount = amount;
         this.type = type;
         this.registerDate = registerDate;
-        this.transactions = new ArrayList<>();
         this.isBlocked = isBlocked;
     }
 
